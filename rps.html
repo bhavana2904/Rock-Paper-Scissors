@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rps</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rock Paper Scissors</h1>
+    <button onclick="
+    console.log('You have chosen rock');
+    generate();
+    if(computerchoice==='Rock') {
+        score.Tie++;
+        console.log('Tie');
+    }else  if (computerchoice==='Paper') {
+        score.lost++;
+        console.log('Computer Won');
+    }else{
+        score.win++;
+        console.log('User won');2
+    }
+    console.log(score);
+    "
+    >Rock</button>
+    <button onclick="console.log('You have chosen Paper');
+    generate();
+    if(computerchoice==='Rock') {
+        score.win++;
+        alert('User wins');
+    }else  if (computerchoice==='Paper') {
+        score.Tie++;
+        alert('TIe');
+    }else{
+        score.lost++;
+        alert('Computer won');2
+    }
+    console.log(score);
+    ">Paper</button>
+    <button onclick="console.log('You have chosen Scissors');
+    generate();
+    if(computerchoice==='Rock') {
+        score.lost++;
+        console.log('Computer wins');
+    }else  if (computerchoice==='Paper') {
+        score.win++;
+        console.log('User wins');
+    }else{
+        score.Tie++;
+        console.log('Tie');
+    }
+    console.log(score);
+    ">Scissors</button>
+    <script>
+        let score = {
+            win:0,
+            lost:0,
+            Tie:0
+        };
+    let computerchoice;
+    function generate(){
+        let randomno = Math.random()*3;
+    if (randomno >0 && randomno<=1) {
+        computerchoice = 'Rock';
+        console.log('Computer has chosen rock');
+    }else if (randomno>1 && randomno<=2){
+        computerchoice = 'Paper';
+        console.log('Computer has chosen Paper');
+    }else{
+        let computerchoice = 'Scissors';
+        console.log('Computer has chosen Scissors');
+    }
+}
+    
+    </script>
+</body>
+</html>
